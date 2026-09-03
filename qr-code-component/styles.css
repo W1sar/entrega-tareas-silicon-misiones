@@ -1,0 +1,56 @@
+:root {
+  --color-fondo: #1a1a1a;
+  --color-tarjeta: #ffffff;
+  --color-acento: #ff6600;
+  --color-texto-principal: #1a1a1a;
+  --color-texto-secundario: #777777;
+}
+
+body {
+  background-color: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+article {
+  background-color: var(--color-tarjeta);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--color-acento);
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: var(--color-texto-principal);
+  margin: 16px 0 8px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--color-texto-secundario);
+  margin: 0 0 8px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  article {
+    max-width: 90%;
+  }
+}
