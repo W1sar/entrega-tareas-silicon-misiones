@@ -1,0 +1,81 @@
+:root {
+  --color-fondo: #0a0a0a;
+  --color-dorado: #c8aa6e;
+  --color-tarjeta: #1e2328;
+  --color-texto: #f0e6d2;
+  --color-rojo: #e84057;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Georgia', serif;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: var(--color-dorado);
+}
+
+textarea {
+  width: 90%;
+  max-width: 500px;
+  height: 120px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid var(--color-dorado);
+  background-color: var(--color-tarjeta);
+  color: var(--color-texto);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.tarjeta {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-dorado);
+  border-radius: 8px;
+  padding: 16px 20px;
+  min-width: 100px;
+}
+
+.tarjeta span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-dorado);
+  display: block;
+}
+
+.excedido {
+  border-color: var(--color-rojo) !important;
+}
+
+span.excedido {
+  color: var(--color-rojo) !important;
+}
+
+button {
+  display: block;
+  margin: 12px auto 0;
+  padding: 8px 20px;
+  background-color: var(--color-dorado);
+  color: var(--color-fondo);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
