@@ -1,0 +1,198 @@
+:root {
+  --color-fondo: #0d0d0d;
+  --color-tarjeta: #1a1a1a;
+  --color-verde: #baff29;
+  --color-texto: #e0e0e0;
+  --color-texto-secundario: #888888;
+  --color-error: #ff4d4d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  font-family: 'Courier New', monospace;
+  color: var(--color-texto);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: var(--color-verde);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.tarjeta {
+  background-color: var(--color-tarjeta);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 20px rgba(186, 255, 41, 0.05);
+}
+
+.visor {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.campo-password {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: var(--color-verde);
+  outline: none;
+}
+
+.campo-password:focus {
+  border-color: var(--color-verde);
+}
+
+.btn-copiar {
+  padding: 12px 16px;
+  background-color: #262626;
+  color: var(--color-texto);
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.btn-copiar:hover {
+  background-color: #333;
+}
+/* --- Formulario y Slider --- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fila-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-label {
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.slider-numero {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-verde);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--color-verde);
+  cursor: pointer;
+}
+
+/* --- Opciones (Checkboxes) --- */
+.contenedor-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  cursor: pointer;
+  user-select: none;
+}
+
+.opcion input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-verde);
+  cursor: pointer;
+}
+
+/* --- Botón Generar --- */
+.btn-generar {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--color-verde);
+  color: #0d0d0d;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.btn-generar:hover {
+  opacity: 0.9;
+}
+
+.btn-generar:active {
+  transform: scale(0.98);
+}
+
+/* --- Mensaje de Error (Paso 7) --- */
+.mensaje-error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin: 4px 0 0 0;
+  text-align: center;
+}
+
+/* --- Medidor de Fortaleza (Paso 8) --- */
+.fila-fortaleza {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.fortaleza-label {
+  font-size: 0.85rem;
+  color: var(--color-texto-secundario);
+  letter-spacing: 1px;
+}
+
+.fortaleza-valor {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--color-verde);
+  text-transform: uppercase;
+}
+
+/* --- Estado Copiado (Paso 9) --- */
+.btn-copiar.copiado {
+  background-color: var(--color-verde);
+  color: #0d0d0d;
+  font-weight: bold;
+}
